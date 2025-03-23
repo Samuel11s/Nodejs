@@ -1,7 +1,7 @@
 // A server to display my module
 
 var http = require('http');
-var myfirstmodule = require('modules/first_module.js');
+var myfirstmodule = require('./modules/first_module.js');
 
 http.createServer(function (req, res) {
     res.writeHead(200, {'Content-Type': 'text/html'});
