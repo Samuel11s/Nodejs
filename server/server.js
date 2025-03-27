@@ -1,7 +1,7 @@
 // Display: All things I've learned
 
 var http = require('http');
-var myfirstmodule = require('./modules/myfirstmodule.js');
+var myfirstmodule = require('./modules/first_module.js');
 var fs = require('fs')
 
 http.createServer(function (req, res) {
