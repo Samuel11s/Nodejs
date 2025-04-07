@@ -19,7 +19,7 @@ http.createServer(function (req, res) {
     res.end('Current date and time: ' + myfirstmodule.myDateTime());
   } else if (req.url === '/path') {
     res.writeHead(200, { 'Content-Type': 'text/html; charset=UTF-8' });
-    res.write('<h1>Démo du module path</h1>');
+    res.write('<h1>Path module demo</h1>');
     res.write('<ul>');
       for (const [key, value] of Object.entries(pathDemo)) {
         res.write(`<li><strong>${key}</strong> : ${value}</li>`);
