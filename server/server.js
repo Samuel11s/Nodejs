@@ -4,7 +4,7 @@ const myfirstmodule = require('./modules/first_module.js');
 
 http.createServer(function (req, res) {
   if (req.url === '/') {
-    fs.readFile('server/public/demo.html', function(err, data) {
+    fs.readFile('public/demo.html', function(err, data) {
       res.writeHead(200, { 'Content-Type': 'text/html' });
       if (err) {
         res.end("Error reading HTML file: " + err.message);
