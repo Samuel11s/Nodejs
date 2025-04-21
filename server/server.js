@@ -3,6 +3,7 @@ const fs = require('fs');
 const myfirstmodule = require('./modules/first_module.js');
 const pathDemo = require('./modules/pathDemo.js');
 const osDemo = require('./modules/osDemo.js');
+const eventsDemo = require('./modules/eventsDemo.js');
 
 http.createServer(function (req, res) {
   switch (req.url) {
@@ -37,6 +38,11 @@ http.createServer(function (req, res) {
       res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
       res.end(JSON.stringify(osDemo, null, 2));
       break;
+
+    case '/events':
+      res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
+      res.end(eventsDemo);
+    break;
 
     default:
       res.writeHead(404, { 'Content-Type': 'text/plain' });
