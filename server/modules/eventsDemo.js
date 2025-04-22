@@ -1,12 +1,15 @@
 const EventEmitter = require('events');
 
-// Créer une instance de l'EventEmitter
+// Create an instance of EventEmitter
 const myEmitter = new EventEmitter();
 
-// Écouter un événement
+// Listen for an event
 myEmitter.on('greeting', () => {
   console.log('Hello from the event!');
 });
 
-// Émettre l'événement
-module.exports = myEmitter.emit('greeting');
+// Emit the event
+myEmitter.emit('greeting');
+
+// Export the emitter instance (not the result of emit)
+module.exports = myEmitter;

@@ -41,7 +41,8 @@ http.createServer(function (req, res) {
 
     case '/events':
       res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
-      res.end(eventsDemo);
+      eventsDemo.emit('greeting');
+      res.end('Return in your terminal to see the result');
     break;
 
     default:
