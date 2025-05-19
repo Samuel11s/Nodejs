@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mini To-Do App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="https://static-00.iconduck.com/assets.00/todo-icon-512x512-voha1qns.png" type="image/x-icon">
+  <link rel="stylesheet" href="/sbit.css" />
+  <link rel="stylesheet" id="theme" href="/theme/default.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>.rotate-45 {transform: rotate(45deg); transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);}</style>
+</head>
+<body class="sbit-theme-l5">
+
+  <header class="sbit-animate-top sbit-theme-d3 sbit-round-top sbit-padding-32 sbit-center" style="position: sticky; top: -50px;margin: 0;border-radius: 0px 0px 20px 20px;z-index:1">
+    <img src="https://static-00.iconduck.com/assets.00/todo-icon-512x512-voha1qns.png" alt="icon duck todo list" class="sbit-margin-top" width="50px" height="50px"><h2 class="sbit-">TO-DO APP</h2>
+  </header>
+
+  <main class="sbit-padding" style="display: flex; justify-content: center; align-items: center; flex-direction: column;flex-wrap: wrap;">
+    <div id="ToDoForm" class="sbit-hide-small sbit-col l6 m11 s12 sbit-animate-zoom" style="position: sticky; top: -60px;z-index:0">
+      <%- include('form') %>
+    </div>
+    <ul class="sbit-ul sbit-card-4 sbit-col l8 m10 s12 sbit-white sbit-round-xlarge sbit-padding sbit-margin-bottom sbit-animate-bottom" style="z-index: 1;">
+      <h3 class="sbit-center">Tasks</h3>
+      <div id="todoList"></div>
+    </ul>
+    <div style="width: 45px;position:fixed; bottom: 10px; right: 10px;z-index: 2;">
+      <button id="btn-theme" class="sbit-button sbit-theme-d4 sbit-circle sbit-card-4 sbit-margin-bottom sbit-large sbit-animate-right" onclick="changeTheme()" data="dark"><i id="icon-theme" class="fa fa-moon"></i></button>
+      <button id="mini-add-btn" class="sbit-button sbit-theme-d5 sbit-circle sbit-card-4 sbit-large sbit-animate-right sbit-hide-large sbit-hide-medium" onclick="showTodoForm()"><i id="mini-add-icon" class="fa fa-plus"></i></button>
+    </div>
+  </main>
+  <footer class="sbit-center sbit-padding" style="bottom: 0px;">
+    <hr>
+    <p>Copyright Mini-TO-DO app 2025 <br> Designed by <a href="https://github.com/samuel11s" target="_blank" rel="noopener noreferrer">@Sbit</a></p>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>
